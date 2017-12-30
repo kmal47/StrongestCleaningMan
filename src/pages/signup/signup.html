@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <div class="spacer" style="width:300px;height:52px;" id="signup-spacer3"></div>
+  
+    <ion-list id="signup-list6">
+      <ion-item id="signup-input6">
+        <ion-label></ion-label>
+        <ion-input type="email" placeholder="Email" [(ngModel)]="newuser.email"></ion-input>
+      </ion-item>
+      <ion-item id="signup-input7">
+        <ion-label></ion-label>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="newuser.password"></ion-input>
+      </ion-item>
+      <ion-item id="signup-input5">
+        <ion-label></ion-label>
+        <ion-input type="text" placeholder="Full Name" [(ngModel)]="newuser.displayName"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-item id="signup-input9">
+      <ion-label></ion-label>
+      <ion-input type="text" placeholder="Address" [(ngModel)]="newuser.address"></ion-input>
+    </ion-item>
+    <ion-item id="signup-input11">
+      <ion-label></ion-label>
+      <ion-input type="text" placeholder="Phone Number" [(ngModel)]="newuser.phone"></ion-input>
+    </ion-item>
+    <ion-item id="signup-input10">
+      <ion-label></ion-label>
+      <ion-input type="text" placeholder="Rate Per Hour" [(ngModel)]="newuser.rate"></ion-input>
+    </ion-item>
+    <button id="signup-button6" ion-button color="dark" block (click)="signup()">Sign Up</button>
+    <button ion-button full clear color="light" (click)="goback()">Go Back</button>
+ 
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+  <ion-title>Dashboard</ion-title>
+  <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons> 
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="profile-image" (click)="editimage()">
+            <img src="{{avatar}}" (click)="editimage()">
+    </div>
+    <div>
+      <h2 (click)="editname()">{{displayName}}</h2>
+    </div>
+    <div>
+      Tap on your picture to change it.
+    </div>
+    <div class="spacer" style="height: 10px;"></div>
+    
+    <ion-card color="dark">
+        <ion-card-header >
+            About Me
+        </ion-card-header>
+
+        <ion-list>
+
+            <button ion-item>
+                <ion-icon name="call" item-left></ion-icon>
+                <a>Phone Number: {{phone}}</a>
+            </button>
+
+            <button ion-item>
+                <ion-icon name="navigate"  item-left></ion-icon>
+                <a>Address: {{address}}</a>
+            </button>
+
+            <button ion-item>
+                <ion-icon name="pricetags"  item-left></ion-icon>
+                <a>Rate/Hour:RM {{rate}}</a>
+            </button>
+
+        </ion-list>
+       
+       
+    </ion-card>
+    
+    <button ion-button color="dark" block (click)="update()">
+            Update Information
+          </button>
+          <button ion-button color="dark" block (click)="viewmap()">
+            Update My Location
+          </button>
+    </ion-content>
